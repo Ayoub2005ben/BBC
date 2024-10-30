@@ -1,0 +1,235 @@
+/* Estilos básicos */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; 
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra del header */
+}
+
+/* Estilo para el logo */
+.logo {
+    font-size: 28px; /* Tamaño del logo */
+    color: #ffffff; /* Color del logo */
+    font-weight: bold; /* Negrita para el logo */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+}
+
+/* Navegación */
+.navigation {
+    display: flex;
+    justify-content: center; /* Centrar los enlaces de navegación */
+    gap: 15px; /* Espaciado entre los enlaces */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+/* Estilo para los enlaces de navegación */
+.navegacion__link {
+    color: #ffffff; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    padding: 10px 15px; /* Espaciado alrededor del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background 0.3s, color 0.3s; /* Suavizado en hover */
+}
+
+/* Efecto hover para los enlaces de navegación */
+.navegacion__link:hover {
+    background: rgba(255, 255, 255, 0.1); /* Fondo al pasar el cursor */
+}
+
+/* Barra de búsqueda */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 20px; /* Espaciado a la izquierda */
+    transition: box-shadow 0.3s;
+}
+
+.search-bar:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.search-bar .search-icon {
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 16px;
+}
+/* Main content area */
+.principal {
+    max-width: 1200px;
+    width: 100%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subtitle__title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de noticias */
+.news-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Tarjetas de noticias */
+.news-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 15px;
+    text-align: left;
+    transition: transform 0.3s; /* Suavizado de transformación */
+}
+
+.news-card:hover {
+    transform: translateY(-5px); /* Elevación al pasar el cursor */
+}
+
+.news-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.news-card h2, .news-card h3, .news-card h4 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.news-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.news-card a {
+    display: block;
+    color: #f71212;
+    font-size: 14px;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
+/* Estilos para el footer */
+footer {
+    margin-top: auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #1852c6;
+    color: #ffffff; /* Aumentar contraste */
+    width: 100%;
+}
+
+/* Botón */
+.btn {
+    padding: 10px 20px;
+    background: #333;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center; 
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    color: #333;
+    transform: scale(1.05);
+}
+
+.btn:after {
+    content: "";
+    background: #ffffff;
+    position: absolute;
+    z-index: -1;
+    left: -100%;
+    right: -100%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: transform 0.5s ease;
+}
+
+.btn:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .navigation {
+        flex-direction: column; /* Cambiar la dirección para móviles */
+        align-items: flex-start;
+    }
+    .news-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+}
+
+/* Tarjetas de noticias */
+.news-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 15px;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.news-card img {
+    display: block; /* Cambia a block para que funcione margin: auto */
+    margin: 0 auto; /* Centra la imagen */
+    width: 80%; /* Ajusta el tamaño de la imagen si es necesario */
+    height: auto; /* Mantiene la proporción */
+}

@@ -1,0 +1,211 @@
+/* Estilos básicos */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #e0e0e0; /* Color de fondo gris claro */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: column; /* Cambiado a columna para centrar el logo */
+    align-items: center; /* Centrar el contenido */
+    background-color: #333; /* Fondo gris oscuro para el header */
+    padding: 15px 20px; /* Ajustar el padding */
+    width: 100%;
+    box-sizing: border-box;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Logo */
+.logo {
+    font-size: 28px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px; /* Espacio debajo del logo */
+}
+
+/* Estilos para los botones */
+.navigation {
+    display: flex; /* Flex para los botones */
+    gap: 15px; /* Espacio entre los botones */
+}
+
+.btn {
+    width: 5em; /* Ajustar el ancho del botón */
+    height: 2em; /* Ajustar la altura del botón */
+    margin: 0.5em; /* Margen entre los botones */
+    background: black; /* Fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 0.625em; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente ajustado */
+    font-weight: bold; /* Negrita */
+    cursor: pointer; /* Cursor de mano al pasar el mouse */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center; /* Centra el texto dentro del botón */
+    display: flex; /* Para centrar contenido */
+    justify-content: center; /* Alinea el contenido en el centro */
+    align-items: center; /* Alinea verticalmente en el centro */
+}
+
+/* Hover para el botón */
+.btn:hover {
+    color: black; /* Color de texto al hacer hover */
+}
+
+.btn:after {
+    content: "";
+    background: white; /* Fondo del efecto */
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1); /* Efecto de animación */
+    transition: all 0.5s;
+}
+
+.btn:hover:after {
+    transform: skewX(-45deg) scale(1, 1); /* Activar el efecto de hover */
+}
+
+/* Main content area */
+main {
+    max-width: 1200px; /* Ancho máximo */
+    width: 100%;
+    margin: 20px auto; /* Centrar horizontalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos verticalmente */
+    text-align: center; /* Centramos el texto */
+}
+
+h1 {
+    font-size: 36px; /* Tamaño del título */
+    margin: 20px 0; /* Margen superior e inferior */
+    color: #000000; /* Color del título */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+p {
+    font-size: 18px; /* Tamaño del texto */
+    color: #555; /* Color del texto */
+    margin-bottom: 40px; /* Espaciado inferior para separación */
+}
+
+/* Footer */
+footer {
+    margin-top: auto; /* Empujar el footer al fondo */
+    padding: 20px; /* Espaciado en el footer */
+    text-align: center; /* Centrar texto */
+    background-color: #333; /* Color gris oscuro para el footer */
+    color: white; /* Color del texto */
+    width: 100%; /* Ancho completo */
+}
+
+/* Estilo responsivo */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column; /* Alinear verticalmente en pantallas pequeñas */
+        align-items: flex-start; /* Alinea a la izquierda en pantallas pequeñas */
+    }
+
+    h1 {
+        font-size: 28px; /* Ajustamos el tamaño del título en pantallas pequeñas */
+    }
+}
+
+.action-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn-action {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.btn-action:hover {
+    background-color: #0056b3;
+}
+
+.action-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-action {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-action:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para los botones de acción */
+.action-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn-action {
+    padding: 12px 25px; /* Aumentar tamaño */
+    background-color: #28a745; /* Color verde para el botón de suscripción */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s; /* Añadir transición para el efecto de transform */
+    font-size: 18px; /* Tamaño de fuente ajustado */
+    font-weight: bold; /* Negrita para destacar el texto */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.btn-action:hover {
+    background-color: #218838; /* Color más oscuro en hover */
+    transform: translateY(-2px); /* Efecto de levantamiento al pasar el mouse */
+}
+
+/* Botón de contactar */
+.btn-contact {
+    padding: 12px 25px; /* Mismo tamaño que el botón de suscripción */
+    background-color: #007bff; /* Color azul para el botón de contacto */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s; /* Suavizar la transición */
+    font-size: 18px; /* Tamaño de fuente ajustado */
+    font-weight: bold; /* Negrita para destacar el texto */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.btn-contact:hover {
+    background-color: #0056b3; /* Color más oscuro en hover */
+    transform: translateY(-2px); /* Efecto de levantamiento al pasar el mouse */
+}

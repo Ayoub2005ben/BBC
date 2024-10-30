@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> 
+    <title>AYB News Clone</title>
+</head>
+<body>
+
+<header>
+    <div class="logo">AYB</div>
+    <nav class="navigation">
+        <a href="bienvenido.html" class="btn">Inicio</a> <!-- Modificado para apuntar a bienvenido.html -->
+        <a href="#" class="btn">Noticias</a>
+        <a href="suscribirse.html" class="btn">Suscribirse</a> <!-- Botón para suscribirse -->
+        <a href="contacto.html" class="btn">Contactar</a> <!-- Botón para contactar -->
+        <a href="deportes.html" class="btn">Deportes</a>
+        <a href="negocios.html" class="btn">Negocios</a>
+        <a href="cultura.html" class="btn">Cultura</a>
+        <a href="innovacion.html" class="btn">Innovación</a>
+        
+    </nav>
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Buscar noticias..." onkeyup="searchNews()">
+        <span class="search-icon">🔍</span>
+    </div>
+</header>
+
+<main class="principal">
+    <h1 class="subtitle__title">AYB News</h1>
+    <div class="news-container">
+        <div class="news-grid" id="newsGrid">
+            <!-- Noticias -->
+            <div class="news-card" data-title="La acumulación de tropas rusas es la mayor desde la Segunda Guerra Mundial, dice Estados Unidos">
+                <h2>La acumulación de tropas rusas es la mayor desde la Segunda Guerra Mundial, dice Estados Unidos</h2>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN-tZN3ZM30gb2LAiVT3ImJ_eNHFgbS4b0kQ&s" alt="Troops" />
+                <p>Rusia continúa negando la planificación de una invasión de Ucrania, pero los líderes occidentales dicen que podría ocurrir en los próximos días.</p>
+                <a href="https://example.com/noticia1" target="_blank">Leer más</a>
+            </div>
+            <div class="news-card" data-title="“Creo vida, esperanza y alegría de los escombros de la guerra”: el titiritero de Gaza">
+                <h2>“Creo vida, esperanza y alegría de los escombros de la guerra”: el titiritero de Gaza</h2>
+                <img src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/6dcd/live/8c0424e0-8a85-11ef-92eb-539d3e3fd216.jpg.webp" alt="Mahdy Krira" />
+                <p>“Todo alrededor tuyo evoca desesperación, pero hay fragmentos sueltos en tu ser que instan a la esperanza y la acción”.</p>
+                <a href="https://example.com/noticia2" target="_blank">Leer más</a>
+            </div>
+            <div class="news-card" data-title="Dos atrapados mientras rescatan a cientos de un incendio en un ferry">
+                <h2>Dos atrapados mientras rescatan a cientos de un incendio en un ferry</h2>
+                <img src="https://static01.nyt.com/images/2022/02/18/us/18greece-ferry-fire1/18greece-ferry-fire1-videoSixteenByNine1050.jpg" alt="Ferry Fire" />
+                <p>Greek and Italian boats rush to rescue 290 people from a ferry, with everyone accounted for.</p>
+                <a href="https://example.com/noticia3" target="_blank">Leer más</a>
+            </div>
+            <div class="news-card" data-title="Por qué Kamala Harris pasó de la campaña de la alegría a llamar a Trump 'fascista'">
+                <h2>Por qué Kamala Harris pasó de la campaña de la alegría a llamar a Trump "fascista"</h2>
+                <img src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/253d/live/bae24150-9225-11ef-9347-4b3dd7fd1c89.png.webp" alt="Kamala Harris" />
+                <p>Kamala Harris hace declaraciones fuertes sobre el futuro político de los Estados Unidos...</p>
+                <a href="https://example.com/noticia4" target="_blank">Leer más</a>
+            </div>
+            <div class="news-card" data-title="Gran victoria en el campeonato de fútbol">
+                <img src="https://estaticos-cdn.prensaiberica.es/clip/a891e42e-8427-4506-a53f-fd9576d47aee_16-9-discover-aspect-ratio_default_0.jpg" alt="Viva España, por Josep Pedrerol | El Periódico">
+                <h2 class="news-title">Gran victoria en el campeonato de fútbol</h2>
+                <p class="news-content">El equipo nacional ha ganado el campeonato tras un emocionante partido.</p>
+                <a href="https://example.com/noticia1" target="_blank">Leer más</a>
+            </div>
+            <div class="news-card" data-title="Nueva marca en atletismo">
+                <img src="https://images.ecestaticos.com/28QgZhtV0mASAkagAkX6esUVaPA=/97x0:2116x1514/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F612%2F004%2Fdfe%2F612004dfea5ca3d88ef530dda6871fd4.jpg" alt="Letsile Tebogo, el nuevo Usain Bolt de 19 años que bate récords mientras 'vacila' a sus rivales">
+                <h2 class="news-title">Nueva marca en atletismo</h2>
+                <p class="news-content">Un atleta ha batido un nuevo récord en la carrera de 100 metros.</p>
+                <a href="https://example.com/noticia2" target="_blank">Leer más</a>
+            </div>
+            <div class="news-card" data-title="Crecimiento económico en el último trimestre">
+                <img src="https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2023/10/27/16983933655120.jpg" alt="Crecimiento económico en el último trimestre" class="news-image">
+                <h2 class="news-title">Crecimiento económico en el último trimestre</h2>
+                <a href="https://example.com/noticia1" target="_blank">Leer más</a>
+            </div>
+            <div class="news-card" data-title="Nueva alianza comercial en Asia">
+                <img src="https://www.travelandtourworld.com/wp-content/uploads/2024/10/unnamed-43-1-850x542.jpg" alt="Nueva alianza comercial en Asia" class="news-image">
+                <h2 class="news-title">Nueva alianza comercial en Asia</h2>
+                <a href="https://example.com/noticia2" target="_blank">Leer más</a>
+            </div>
+            <div class="news-card" data-title="Revolución en inteligencia artificial">
+                <img src="https://dynatec.es/wp-content/uploads/2020/06/Portada-IA-industria-4.0-E-1.jpg" alt="Inteligencia artificial: el propulsor de la Industria 4.0 - Dynatec" style="max-width: 1419px; width: 351px; height: 200px;">
+                <h2 class="news-title">Revolución en inteligencia artificial</h2>
+                <p class="news-content">Una nueva tecnología de IA promete transformar varias industrias.</p>
+                <a href="https://example.com/noticia1" target="_blank">Leer más</a>
+            </div>
+            <div class="news-card" data-title="Robots en la industria médica">
+                <img src="https://static4.arrow.com/-/media/arrow/images/820-x-410/0123-healthcare-robot-operating-table-header-820x410.jpg" alt="Los robots en la atención médica como asistentes y cuidadores | Arrow.com" style="max-width: 820px; width: 351px; height: 176px;">
+                <h2 class="news-title">Robots en la industria médica</h2>
+                <p class="news-content">Un robot innovador ayudará en procedimientos quirúrgicos complejos.</p>
+                <a href="https://example.com/noticia2" target="_blank">Leer más</a>
+            </div>
+            <div class="news-card" data-title="Nueva exposición de arte contemporáneo">
+                <img src="https://www.economiadigital.es/tendenciashoy/wp-content/uploads/2023/06/La-Galeria-de-las-Colecciones-Reales-sera-punta-de-lanza-de-los-museos-de-Madrid-1.jpg" alt="Madrid estrena el verano con tres nuevos museos">
+                <h2 class="news-title">Nueva exposición de arte contemporáneo</h2>
+                <p class="news-content">El museo de la ciudad inaugura una exposición de arte contemporáneo.</p>
+                <a href="https://example.com/noticia1" target="_blank">Leer más</a>
+            </div>
+            <div class="news-card" data-title="Concierto benéfico de música clásica">
+                <img src="https://www.lavanguardia.com/files/image_449_220/uploads/2023/04/18/643e4b64df64f.png" alt="Concierto benéfico para ayudar a los niños con distrofia muscular">
+                <h2 class="news-title">Concierto benéfico de música clásica</h2>
+                <p class="news-content">Un grupo de músicos se une para ofrecer un concierto benéfico.</p>
+                <a href="https://example.com/noticia2" target="_blank">Leer más</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    function searchNews() {
+        // Obtener el valor del input de búsqueda
+        const input = document.getElementById('searchInput').value.toLowerCase();
+        const newsCards = document.querySelectorAll('.news-card');
+
+        // Iterar sobre cada tarjeta de noticia
+        newsCards.forEach(card => {
+            const title = card.dataset.title.toLowerCase();
+            
+            // Mostrar o esconder la tarjeta según el texto ingresado
+            if (title.includes(input)) {
+                card.style.display = '';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

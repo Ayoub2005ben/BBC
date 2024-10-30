@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="deportes.css"> <!-- Enlace al CSS -->
+    <title>Deportes - AYB News</title>
+</head>
+<body>
+    <header>
+        <div class="logo">AYB</div>
+        <nav class="navigation">
+            <a href="index.html" class="navegacion__link">Inicio</a>
+            <a href="deportes.html" class="navegacion__link">Deportes</a>
+            <a href="negocios.html" class="navegacion__link">Negocios</a>
+            <a href="cultura.html" class="navegacion__link">Cultura</a>
+            <a href="innovacion.html" class="navegacion__link">Innovación</a>
+        </nav>
+        
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Buscar noticias..." onkeyup="searchNews()">
+        <span class="search-icon">🔍</span>
+    </div>
+    </header>
+
+    <main class="principal">
+        <h1 class="subtitle__title">AYB News</h1>
+        <div class="news-container">
+            <div class="news-grid" id="newsGrid">
+                <!-- Noticias -->
+                <div class="news-card" data-title="Gran victoria en el campeonato de fútbol">
+                    <img src="https://estaticos-cdn.prensaiberica.es/clip/a891e42e-8427-4506-a53f-fd9576d47aee_16-9-discover-aspect-ratio_default_0.jpg" alt="Viva España, por Josep Pedrerol | El Periódico">
+                    <h2 class="news-title">Gran victoria en el campeonato de fútbol</h2>
+                    <p class="news-content">El equipo nacional ha ganado el campeonato tras un emocionante partido.</p>
+                    <a href="https://example.com/noticia1" target="_blank">Leer más</a>
+                </div>
+                <div class="news-card" data-title="Nueva marca en atletismo">
+                    <img src="https://images.ecestaticos.com/28QgZhtV0mASAkagAkX6esUVaPA=/97x0:2116x1514/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F612%2F004%2Fdfe%2F612004dfea5ca3d88ef530dda6871fd4.jpg" alt="Letsile Tebogo, el nuevo Usain Bolt de 19 años que bate récords mientras 'vacila' a sus rivales">
+                    <h2 class="news-title">Nueva marca en atletismo</h2>
+                    <p class="news-content">Un atleta ha batido un nuevo récord en la carrera de 100 metros.</p>
+                    <a href="https://example.com/noticia2" target="_blank">Leer más</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function searchNews() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const newsCards = document.querySelectorAll('.news-card');
+            newsCards.forEach(card => {
+                const title = card.dataset.title.toLowerCase();
+                card.style.display = title.includes(input) ? '' : 'none';
+            });
+        }
+    </script>
+
+    <footer>
+        <p>© 2024 AYB News. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

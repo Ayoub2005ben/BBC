@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="negocios.css"> <!-- Enlace al CSS -->
+    <title>Negocios - AYB News</title>
+</head>
+<body>
+    <header>
+        <div class="logo">AYB</div>
+        <nav class="navigation">
+            <a href="index.html" class="navegacion__link">Inicio</a>
+            <a href="deportes.html" class="navegacion__link">Deportes</a>
+            <a href="negocios.html" class="navegacion__link">Negocios</a>
+            <a href="cultura.html" class="navegacion__link">Cultura</a>
+            <a href="innovacion.html" class="navegacion__link">Innovación</a>
+        </nav>
+      
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Buscar noticias..." onkeyup="searchNews()">
+        <span class="search-icon">🔍</span>
+    </div>
+    </header>
+    <main class="principal">
+        <h1 class="subtitle__title">AYB News</h1>
+        <div class="news-container">
+            <div class="news-grid" id="newsGrid">
+                <!-- Noticias -->
+                <div class="news-card" data-title="Crecimiento económico en el último trimestre">
+                    <img src="https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2023/10/27/16983933655120.jpg" alt="Crecimiento económico en el último trimestre" class="news-image">
+                    <h2 class="news-title">Crecimiento económico en el último trimestre</h2>
+                    <a href="https://example.com/noticia1" target="_blank">Leer más</a>
+                </div>
+                <div class="news-card" data-title="Nueva alianza comercial en Asia">
+                    <img src="https://www.travelandtourworld.com/wp-content/uploads/2024/10/unnamed-43-1-850x542.jpg" alt="Nueva alianza comercial en Asia" class="news-image">
+                    <h2 class="news-title">Nueva alianza comercial en Asia</h2>
+                    <a href="https://example.com/noticia2" target="_blank">Leer más</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function searchNews() {
+            // Obtener el valor del input de búsqueda
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const newsCards = document.querySelectorAll('.news-card');
+
+            // Iterar sobre cada tarjeta de noticia
+            newsCards.forEach(card => {
+                const title = card.dataset.title.toLowerCase();
+                
+                // Mostrar o esconder la tarjeta según el texto ingresado
+                if (title.includes(input)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+    
+    <footer>
+        <p>© 2024 AYB News. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
